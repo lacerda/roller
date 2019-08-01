@@ -1,6 +1,6 @@
 # roller
 
-Roller is a movie recommendation system that understands stories as an array of emotion frequencies.
+Roller is a system to represent text that understands stories as an array of emotions frequencies, allowing emotional comparison between texts.
 
 ## Motivation
 
