@@ -1,17 +1,13 @@
 # roller
 
-Roller is a movie recommendation system that understands movies as emotional rollercoasters.
+Roller is a movie recommendation system that understands stories as an array of emotion frequencies.
 
 ## Motivation
 
-I developed the concept of movie recommendations based on similarity of emotions over a timeline back in 2016.
-The results weren't great due to many reasons, but the idea showed promise. I would like to try again with better tools and data.
+I developed the concept of recommendations based on similarity of emotions over a timeline back in 2016 as a response to most movie recommendation systems being based on collaborative filtering, or based on theme and genre recommendations.
 
-## Current state
+## Emotion based representations
 
-This proof of concept has a few shortcomings:
-- Data is comprised of only 1000 movie scripts. These contain inconsistent structures, such as scene descriptions, character dialogue demarcations, dialogue only, official and fan-written.
-- Emotion annotation depends on EmoLex. This is a dataset sourced from Mechanical Turk with many errors and does not take context into account.
-- Scenes are not clearly demarcated. Each datum is simply an array of frequencies of each emotion in a section, where sections are partitions of text based on token length.
+Instead of looking superficially at words in a story, consider how they make us feel. There are many emotion annotation systems such as NRC EmoLex, WordNet-Affect, Affective Text, themselves based on studies by Eckman or Plutchik. By tracking the frequency of emotions throughout a story, an emotion-based representation is produced, allowing comparison with other stories as well as recommendations.
 
-Moreover, this was developed in python 2.7, for which one of the dependencies (py_lex) is in a broken state.
+A proof-of-concept of this idea is available in this repository at ('Recommending stories based on emotional timelines.pdf')[https://github.com/lacerda/roller/blob/master/Recommending%20stories%20based%20on%20emotional%20timelines.pdf].
